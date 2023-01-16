@@ -1,15 +1,37 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+union Book{
+    char Name[20];
+    char Author[20];
+    int Publish_Year;
+    int Page;
+    int Is_Avalible;
+};
+
+//int searchPerson(struct person * Book_Name ,char Book_Request_Name );{
+
+
+    
+
+
+
+
+
 
 int main() {
     printf("Welcome to Library\n");
 
-    struct Book{
-        char Name[20];
-        char Author[20];
-        int Publish_Year;
-        int Page;
-        int Is_Avalible;
-    };
+    char Book_Indexes[20];
+    union Book a;
+    Book_Indexes[0] = 'a';
+    
+    strcpy(a.Name, "Test_Name");
+
+
+
 
     printf("Please search for the book you want\n" );
     int search;
@@ -22,6 +44,7 @@ int main() {
 
     switch (search){
         case 1:
+            printf("%s\n" ,  a.Name);
             printf("it works");
             break;
         case 2:
@@ -37,7 +60,7 @@ int main() {
             printf("Error");
 
     }
-
+   
 
 
     return 0;
